@@ -1,5 +1,4 @@
 .\rvmdk\blinky.o: blinky.c
-.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\time.h
 .\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\stdbool.h
@@ -8,3 +7,6 @@
 .\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\driverlib/gpio.h
 .\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\driverlib/adc.h
 .\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\driverlib/sysctl.h
+.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\driverlib/timer.h
+.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\inc/hw_nvic.h
+.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\inc/hw_types.h

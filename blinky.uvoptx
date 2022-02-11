@@ -120,7 +120,6 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>ĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚĚČ`ŢÄľ¬#8÷®</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -164,6 +163,16 @@
           <count>1</count>
           <WinNumber>1</WinNumber>
           <ItemText>ui32Value</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>timerValue</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>(MotorStopTime-MotorStartTime)/16000000</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
