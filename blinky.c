@@ -21,10 +21,11 @@
 // This is part of revision 2.2.0.295 of the EK-TM4C123GXL Firmware Package.
 //
 //*****************************************************************************
-
+#include <time.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdbool.h>
+
 #include "inc/hw_memmap.h"
 #include "driverlib/debug.h"
 #include "driverlib/gpio.h"
@@ -64,6 +65,9 @@ main(void)
 {
 		printf("\n\nTeszt\n\n");
     volatile uint32_t ui32Loop;
+	
+	// Declare variables for motor run time measurement
+		time_t MotorStartTime = 0;
 
 
 	  // ADC part-----------
@@ -137,6 +141,7 @@ main(void)
 		
     while(1)
     {
+			
 			//
 			// Trigger the sample sequence.
 			//
@@ -152,13 +157,27 @@ main(void)
 			ADCSequenceDataGet(ADC0_BASE, 0, &ui32Value);
 
 
-				if(ui32Value > 0xAF0){ //Motor on
-       
-        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0x0);
+				if(ui32Value >= 0){ //Motor on when dryness is above threshold. 0xAF0
+				
+					// First motor activation
+					if(MotorStartTime == 0){
+						MotorStartTime = time(NULL);
+						GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0x0);
+					}
+					// If motor was on for more than 5 seconds, shut it down.
+					else if(time(NULL) - MotorStartTime > 5) {
+						GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+					}
+					// After 10 minutes since the first motor activation, starting the motor is available again. 
+					// MotorStartTime is set to 0 so that the next time we have a valid dryness value, it may start again for 5 seconds.
+					else if(time(NULL) - MotorStartTime > 600) {
+						MotorStartTime = 0;
+					}
 					
+				
 				}
 				
-				else{ //Motor off
+				else{ //Motor off when dryness is below threshold.
 					GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
 				}
         //
