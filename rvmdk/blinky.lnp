@@ -1,7 +1,7 @@
 --cpu=Cortex-M4.fp.sp
 ".\rvmdk\blinky.o"
 ".\rvmdk\startup_rvmdk.o"
-"..\..\..\..\driverlib\rvmdk\driverlib.lib"
+"..\..\..\driverlib\rvmdk\driverlib.lib"
 ".\rvmdk\retarget_io.o"
 --library_type=microlib --strict --scatter "blinky.sct"
 --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

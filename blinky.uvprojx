@@ -401,7 +401,7 @@
             <File>
               <FileName>driverlib.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\..\..\driverlib\rvmdk\driverlib.lib</FilePath>
+              <FilePath>G:\Keil\driverlib\rvmdk\driverlib.lib</FilePath>
             </File>
           </Files>
         </Group>
