@@ -1,0 +1,9 @@
+.\rvmdk\blinky.o: blinky.c
+.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\rvmdk\blinky.o: G:\Keil\2021_Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\rvmdk\blinky.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\blinky.o: ..\..\..\..\driverlib/debug.h
+.\rvmdk\blinky.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\blinky.o: ..\..\..\..\driverlib/adc.h
+.\rvmdk\blinky.o: ..\..\..\..\driverlib/sysctl.h

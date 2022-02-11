@@ -1,0 +1,4 @@
+90% under water			0x5EA	1514
+air, relative humidity: 49% 	0xE35	3637
+föld, még nem kell locsolni	0x845	2117
+locsolási limit (TESZT)		0xAF0	2800
